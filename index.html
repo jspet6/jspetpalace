@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,25 +48,33 @@
     100% { transform: translateY(-100%); }
 }
 
-/* --- SCROLLING NAVBAR --- */
+/* --- USER-SCROLLABLE NAVBAR (NO SCROLLBAR) --- */
 .navbar {
     position: fixed;
-    top: 30px; /* Sits exactly below the top border */
+    top: 30px; 
     width: 100%;
     background: rgba(0,0,0,0.95);
     border-bottom: 1px solid #fe14ca;
     z-index: 1000;
-    overflow: hidden; /* Hides the links as they scroll out of view */
-    height: 65px;
+    height: 70px;
     display: flex;
     align-items: center;
+    
+    /* Manual Scroll Logic */
+    overflow-x: auto; 
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 0 20px;
+    -webkit-overflow-scrolling: touch; 
 }
 
-.nav-scroll-container {
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100%;
-    animation: edgeScroll 15s linear infinite; /* Adjust speed here */
+/* This part specifically hides the scrollbar line while keeping the scroll function active */
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+.navbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .navbar a {
@@ -78,7 +85,8 @@
     border: 1px solid #fe14ca;
     border-radius: 6px;
     background: #111;
-    margin-right: 20px;
+    margin: 0 10px;
+    flex-shrink: 0; /* Prevents buttons from squishing */
 }
 
 /* --- LOGO FIX --- */
@@ -99,7 +107,7 @@ body {
 }
 
 .container {
-    padding-top: 180px; /* Extra space so top content isn't hidden by scrolling tabs */
+    padding-top: 180px;
     width: 90%;
     max-width: 800px;
     margin: auto;
@@ -165,13 +173,11 @@ body {
 </div>
 
 <div class="navbar">
-    <div class="nav-scroll-container">
-        <a href="#">Home</a>
-        <a href="#">Pet Grooming</a>
-        <a href="#">Creative Grooming</a>
-        <a href="#">Reviews</a>
-        <a href="#">Meet Your Groomer</a>
-    </div>
+    <a href="#">Home</a>
+    <a href="#">Pet Grooming</a>
+    <a href="#">Creative Grooming</a>
+    <a href="#">Reviews</a>
+    <a href="#">Meet Your Groomer</a>
 </div>
 
 <div class="container">
