@@ -148,39 +148,44 @@ body {
 }
 
 /* BORDER TEXT */
-.scroll-path {
+.border-line {
     position: fixed;
+    width: 200%;
     font-size: 11px;
     color: white;
     text-shadow: 0 0 2px #fe14ca;
     white-space: nowrap;
+    pointer-events: none;
 }
 
-.top { top: 0; left: 0; animation: topMove 5s linear infinite; }
-.right { right: 0; top: 0; writing-mode: vertical-rl; animation: rightMove 5s linear infinite; }
-.bottom { bottom: 0; right: 0; animation: bottomMove 5s linear infinite; }
-.left { left: 0; bottom: 0; writing-mode: vertical-rl; animation: leftMove 5s linear infinite; }
-
-@keyframes topMove {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+/* FIRST LINE */
+.line1 {
+    top: 0;
+    left: -50%;
+    transform: rotate(45deg);
+    transform-origin: left top;
+    animation: moveClockwise 4s linear infinite;
 }
 
-@keyframes rightMove {
-    from { transform: translateY(0); }
-    to { transform: translateY(-50%); }
+/* SECOND LINE (OFFSET) */
+.line2 {
+    bottom: 0;
+    right: -50%;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+    animation: moveClockwise 4s linear infinite reverse;
 }
 
-@keyframes bottomMove {
-    from { transform: translateX(0%); }
-    to { transform: translateX(0); }
+/* CLOCKWISE MOTION */
+@keyframes moveClockwise {
+    from {
+        transform: rotate(45deg) translateX(0);
+    }
+    to {
+        transform: rotate(45deg) translateX(-50%);
+    }
 }
-
-@keyframes leftMove {
-    from { transform: translateY(0); }
-    to { transform: translateY(50%); }
-}
-
+transform: translateY(0)
 </style>
 </head>
 
@@ -195,10 +200,13 @@ body {
 </div>
 
 <!-- BORDER TEXT -->
-<div class="scroll-path top">"Welcome to J’s Pet Palace" • "Where Every Pet Feels Like Family." •</div>
-<div class="scroll-path right">"Welcome to J’s Pet Palace" • "Where Every Pet Feels Like Family." •</div>
-<div class="scroll-path bottom">"Welcome to J’s Pet Palace" • "Where Every Pet Feels Like Family." •</div>
-<div class="scroll-path left">"Welcome to J’s Pet Palace" • "Where Every Pet Feels Like Family." •</div>
+<div class="border-line line1">
+    "Welcome to J’s Pet Palace"       •       "Where Every Pet Feels Like Family." •
+</div>
+<div class="border-line line2">
+    "Welcome to J’s Pet Palace"       •       "Where Every Pet Feels Like Family." •
+</div>
+
 
 <div class="container">
 
