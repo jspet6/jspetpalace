@@ -18,19 +18,11 @@
 
 body {
     font-family: 'Cinzel Decorative', serif;
-    background: black;
     color: white;
     overflow-x: hidden;
-}
 
-/* REVERSED BACKGROUND (PINK → BLACK) */
-body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 80% 30%, #fe14ca, transparent 70%);
-    z-index: -1;
+    /* LEFT → RIGHT FADE */
+    background: linear-gradient(to right, rgba(254,20,202,0.35), black 60%);
 }
 
 /* NAV */
@@ -75,7 +67,7 @@ body::before {
     width: 100%;
 }
 
-/* MAIN TOP BANNER (BIGGER) */
+/* MAIN BANNER */
 .main-banner {
     height: 160px;
     background: #111;
@@ -83,36 +75,46 @@ body::before {
     margin-bottom: 15px;
 }
 
-/* SECOND BANNER (SMALLER) */
+/* SECOND BANNER */
 .sub-banner {
     height: 90px;
     background: #111;
     border: 1px solid #fe14ca;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* SCROLL BOX (THINNER + CENTERED RECTANGLE) */
-.scroll-box {
-    width: 70%;
-    height: 220px;
-    margin: auto;
-    overflow-y: scroll;
-    padding: 20px;
-    background: #111;
-    border: 1px solid #fe14ca;
+/* STACKED TEXT FLOW */
+.flow-text {
     text-align: left;
+    margin: 30px auto;
+    width: 70%;
 }
 
-/* TEXT INSIDE SCROLL */
-.scroll-box p {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
+/* INDIVIDUAL LINE STYLE */
+.flow-text div {
+    margin: 12px 0;
+    font-size: 18px;
+
+    /* EMBOSSED / GLOW EFFECT */
+    color: white;
+    text-shadow:
+        1px 1px 0 #000,
+        0 0 5px #fe14ca,
+        0 0 10px rgba(254,20,202,0.6);
+}
+
+/* SERVICES */
+.services {
+    margin-top: 30px;
+}
+
+.services div {
+    margin: 10px 0;
 }
 
 /* VIDEO */
 .video {
-    margin: 30px 0;
+    margin: 40px 0;
     text-align: center;
 }
 
@@ -148,7 +150,7 @@ body::before {
     white-space: nowrap;
     font-size: 12px;
     color: #fe14ca;
-    animation: scrollText 30s linear infinite;
+    animation: scrollText 35s linear infinite;
 }
 
 .top-border {
@@ -193,58 +195,58 @@ Welcome to J’s Pet Palace — Where Every Pet Feels Like Family • Welcome to
 
 <div class="container">
 
-    <!-- MAIN BANNER -->
     <div class="main-banner"></div>
-
-    <!-- SECOND BANNER -->
     <div class="sub-banner"></div>
 
-    <!-- SCROLL BOX -->
-    <div class="scroll-box">
+    <!-- FLOW TEXT (SCROLL WITH PAGE) -->
+    <div class="flow-text">
 
-        <p>
-        I look forward to pampering your furry friends and providing them with the exceptional care they deserve.
-        Whether it's a simple nail trim or a full groom, I'm here to make your pet look and feel their best.
-        Thank you for choosing me for your pet grooming needs.
-        </p>
+        <div>I look forward to pampering</div>
+        <div>your furry friends</div>
+        <div>and providing them with</div>
+        <div>the exceptional care they deserve</div>
 
-        <br><br>
+        <div>Whether it's a simple nail trim</div>
+        <div>or a full groom</div>
 
-        <p><strong>Services Offered</strong></p>
+        <div>I'm here to make your pet</div>
+        <div>look and feel their best</div>
 
-        <p>
-        Full Groom<br>
-        Bath & Brush<br>
-        Ear Cleaning<br>
-        Nail Trim / File<br>
-        Haircuts<br>
-        Bows (upon request)<br>
-        Deshed Bath<br>
-        Oatmeal Bath<br>
-        Oxy Bath
-        </p>
+        <div>Thank you for choosing me</div>
+        <div>for your pet grooming needs</div>
+
+        <div class="services">
+            <div><strong>Services Offered</strong></div>
+
+            <div>Full Groom</div>
+            <div>Bath & Brush</div>
+            <div>Ear Cleaning</div>
+            <div>Nail Trim / File</div>
+            <div>Haircuts</div>
+            <div>Bows (upon request)</div>
+            <div>Deshed Bath</div>
+            <div>Oatmeal Bath</div>
+            <div>Oxy Bath</div>
+        </div>
 
     </div>
 
-    <!-- VIDEO -->
     <div class="video">
         <video width="100%" controls>
             <source src="videos/sample.mp4">
         </video>
     </div>
 
-    <!-- LOGO -->
     <div class="logo">
         <img src="images/logo.png" width="200">
     </div>
 
-    <!-- EXTRA BANNER -->
     <div class="sub-banner"></div>
 
 </div>
 
 <div class="footer">
-    <p>Instagram | Facebook</p>
+    Instagram | Facebook
 </div>
 
 <button onclick="topFunction()" id="topBtn">Top</button>
