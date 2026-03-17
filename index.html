@@ -160,29 +160,26 @@ body {
 
 /* FIRST LINE */
 .line1 {
-    top: 0;
-    left: -50%;
-    transform: rotate(45deg);
-    transform-origin: left top;
-    animation: moveClockwise 4s linear infinite;
+    top: 20px;
+    left: 0;
+    transform: rotate(0deg);
+    animation: moveClockwise 12s linear infinite;
 }
 
-/* SECOND LINE (OFFSET) */
 .line2 {
-    bottom: 0;
-    right: -50%;
-    transform: rotate(45deg);
-    transform-origin: right bottom;
-    animation: moveClockwise 4s linear infinite reverse;
+    bottom: 20px;
+    left: 0;
+    transform: rotate(0deg);
+    animation: moveClockwise 12s linear infinite reverse;
 }
 
 /* CLOCKWISE MOTION */
 @keyframes moveClockwise {
     from {
-        transform: rotate(45deg) translateX(0);
+        transform: translateX(0);
     }
     to {
-        transform: rotate(45deg) translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 transform: translateY(0)
