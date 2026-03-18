@@ -27,32 +27,28 @@
 /* --- SHARED PAGE STYLES --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Cinzel Decorative', serif; color: #fff; background: #000; overflow-x: hidden; }
-.container { padding-top: 160px; width: 90%; max-width: 800px; margin: auto; }
+.container { padding-top: 160px; padding-bottom: 80px; width: 90%; max-width: 800px; margin: auto; }
 
-/* PINK GLOW BOXES */
-.section-box { border: 1px solid #fe14ca; padding: 25px; margin: 30px auto; width: 75%; text-align: center; }
+.section-box { border: 1px solid #fe14ca; padding: 25px; margin: 30px auto; width: 85%; text-align: center; }
 .section-box div { margin: 10px 0; font-size: 16px; text-shadow: 0 0 1px #fff, 0 0 3px #fe14ca; }
 
-/* PLACEHOLDERS */
-.placeholder { border: 2px dashed #fe14ca; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: #fe14ca; font-size: 14px; text-align: center; margin-bottom: 20px; }
-.video-placeholder { height: 200px; width: 100%; margin-bottom: 20px; }
-.image-placeholder { height: 300px; width: 100%; margin-bottom: 20px; }
+/* MEDIA STYLING */
+img, video { max-width: 100%; height: auto; display: block; margin: 10px auto; border: 1px solid #fe14ca; }
 
-/* FOOTER & BUTTON */
-.footer { margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #fe14ca; }
-#topBtn { position: fixed; bottom: 40px; right: 40px; background: #fe14ca; color: black; border: none; padding: 12px; cursor: pointer; z-index: 10000; }
+.footer { margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #fe14ca; position: relative; z-index: 10001; }
+.footer a { color: #fe14ca; text-decoration: none; font-size: 14px; }
+
+#topBtn { position: fixed; bottom: 40px; right: 40px; background: #fe14ca; color: black; border: none; padding: 12px; cursor: pointer; z-index: 10002; }
 </style>
 </head>
 
 <body>
 
-<!-- BORDER SCROLLS -->
 <div class="edge-banner edge-top"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 <div class="edge-banner edge-bottom"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 <div class="edge-banner edge-left"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 <div class="edge-banner edge-right"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 
-<!-- NAV TABS -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="booking.html">Booking, Grooming & DayCare</a>
@@ -62,54 +58,49 @@ body { font-family: 'Cinzel Decorative', serif; color: #fff; background: #000; o
 
 <div class="container">
 
-    <!-- TOP PICTURE & BANNER PLACEHOLDERS -->
-    <div style="text-align: center; margin-bottom: 20px;">
-         </div>
-    <div class="pictures/border3.png" style="height: 90px; width: 100%;">Bottom Banner Placeholder</div>
-    <div class="pictures/banner3.png" style="height: 160px; width: 100%;">Top Banner Placeholder</div>
+    <!-- TOP BANNERS -->
+    <img src="pictures/border3.png" style="height: 90px; width: 100%;">
+    <img src="pictures/banner3.png" style="height: 160px; width: 100%;">
 
-    <!-- VIDEO GALLERY (6 VIDEOS) -->
+    <!-- VIDEO GALLERY -->
     <div class="section-box">
         <div><strong>Watch Our Furry Clients</strong></div>
-        <div class="pictures/cust1.mp4">Video 1</div>
-        <div class="pictures/groom1.mp4">Video 2</div>
-        <div class="pictures/groom3.mp4">Video 3</div>
-        <div class="pictures/groom4.mp4">Video 4</div>
-        <div class="pictures/groom5.mp4">Video 5</div>
-        <div class="pictures/groom6.mp4">Video 7</div>
+        <video controls><source src="pictures/cust1.mp4" type="video/mp4"></video>
+        <video controls><source src="pictures/groom1.mp4" type="video/mp4"></video>
+        <video controls><source src="pictures/groom3.mp4" type="video/mp4"></video>
+        <video controls><source src="pictures/groom4.mp4" type="video/mp4"></video>
+        <video controls><source src="pictures/groom5.mp4" type="video/mp4"></video>
+        <video controls><source src="pictures/groom6.mp4" type="video/mp4"></video>
     </div>
 
-    <!-- PHOTO GALLERY (6 PICTURES) -->
+    <!-- PHOTO GALLERY -->
     <div class="section-box">
         <div><strong>Our Masterpieces</strong></div>
-        <div class="pictures/pic1.jpg">Picture 1</div>
-        <div class="pictures/pic2.jpg">Picture 2</div>
-        <div class="pictures/pic3.jpg">Picture 3</div>
-        <div class="pictures/pic4.jpg">Picture 4</div>
-        <div class="pictures/pic5.jpg">Picture 5</div>
-        <div class="pictures/pic6.jpg">Picture 6</div>
+        <img src="pictures/pic1.jpg">
+        <img src="pictures/pic2.jpg">
+        <img src="pictures/pic3.jpg">
+        <img src="pictures/pic4.jpg">
+        <img src="pictures/pic5.jpg">
+        <img src="pictures/pic6.jpg">
     </div>
 
     <!-- INSTAGRAM CALL TO ACTION -->
     <div class="section-box">
         <div style="font-size: 18px;"><strong>Please visit our Instagram page!</strong></div>
+        <div style="margin-top: 10px;">Leave reviews, tag us, and see more cuteness!</div>
+    </div>
 
-        <!-- CLICKABLE FOOTER -->
+    <!-- BOTTOM PICTURE & BANNER -->
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="pictures/otherlogo.png" style="width: 300px;">
+    </div>
+    <img src="pictures/border6.png" style="height: 90px; width: 100%;">
+
+</div>
+
 <div class="footer">
     <a href="https://www.instagram.com/jspetpalace/" target="_blank">Instagram</a> | 
     <a href="https://www.facebook.com/profile.php?id=61586446000186" target="_blank">Facebook</a>
-</div>
-
-        
-    <!-- BOTTOM PICTURE & BANNER PLACEHOLDERS -->
-    <div style="text-align: center; margin-top: 20px;">
-        <div class="pictures/otherlogo" style="width: 300px; height: 150px; margin: auto;">Bottom Picture Placeholder</div>
-    </div>
-    <div class="pictures/border6.png" style="height: 90px; width: 100%;">Bottom Banner Placeholder</div>
-
-</div>
-
-
 </div>
 
 <button onclick="topFunction()" id="topBtn">Top</button>
@@ -122,3 +113,4 @@ function topFunction() {
 
 </body>
 </html>
+
