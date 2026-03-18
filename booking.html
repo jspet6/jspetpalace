@@ -7,6 +7,9 @@
 <title>Booking - J’s Pet Palace</title>
 <link href="https://fonts.googleapis.com" rel="stylesheet">
 
+<!-- Google Calendar Styling -->
+<link href="https://calendar.google.com" rel="stylesheet">
+
 <style>
 /* --- FIXED BORDER SCROLL --- */
 .edge-banner { position: fixed; background: #000; z-index: 9999; overflow: hidden; white-space: nowrap; display: flex; align-items: center; }
@@ -104,10 +107,25 @@ th { background: #111; color: #fe14ca; }
     <!-- CALENDAR BOOKING BOX -->
     <div class="section-box">
         <div><strong>Book Your Appointment</strong></div>
-        <div style="margin-top: 15px; border-radius: 8px; overflow: hidden; background: white;">
-            <!-- Your Google Calendar -->
-            <iframe src="https://calendar.google.com" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+        <div style="margin-top: 20px;">
+            <!-- Google Calendar Appointment Scheduling begin -->
+            <script src="https://calendar.google.com" async></script>
+            <script>
+            (function() {
+              var target = document.currentScript;
+              window.addEventListener('load', function() {
+                calendar.schedulingButton.load({
+                  url: 'https://calendar.google.com',
+                  color: '#fe14ca',
+                  label: 'Click to Choose a Time',
+                  target,
+                });
+              });
+            })();
+            </script>
+            <!-- end Google Calendar Appointment Scheduling -->
         </div>
+        <div style="font-size: 12px; margin-top: 15px; opacity: 0.8; color: #fff;">Select a date and time to confirm your pet's visit.</div>
     </div>
 
     <!-- BOTTOM IMAGE PLACEHOLDER -->
