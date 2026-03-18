@@ -18,7 +18,7 @@
 .edge-left span, .edge-right span { animation: edgeScrollVertical 25s linear infinite; padding-top: 100%; padding-left: 0; }
 @keyframes edgeScrollVertical { 0% { transform: translateY(0); } 100% { transform: translateY(-100%); } }
 
-/* --- USER-SCROLLABLE NAVBAR --- */
+/* --- NAVBAR --- */
 .navbar { position: fixed; top: 30px; width: 100%; background: rgba(0,0,0,0.95); border-bottom: 1px solid #fe14ca; z-index: 1000; height: 70px; display: flex; align-items: center; overflow-x: auto; white-space: nowrap; padding: 0 20px; -ms-overflow-style: none; scrollbar-width: none; }
 .navbar::-webkit-scrollbar { display: none; }
 .navbar a { display: inline-block; color: #fe14ca; text-decoration: none; padding: 10px 20px; border: 1px solid #fe14ca; border-radius: 6px; background: #111; margin: 0 10px; flex-shrink: 0; }
@@ -26,36 +26,30 @@
 /* --- SHARED PAGE STYLES --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Cinzel Decorative', serif; color: #fff; background: #000; overflow-x: hidden; }
-.container { padding-top: 160px; width: 90%; max-width: 800px; margin: auto; }
+.container { padding-top: 160px; padding-bottom: 80px; width: 90%; max-width: 800px; margin: auto; }
 
-/* PINK GLOW BOXES */
 .section-box { border: 1px solid #fe14ca; padding: 25px; margin: 30px auto; width: 75%; text-align: center; }
 .section-box div { margin: 10px 0; font-size: 16px; text-shadow: 0 0 1px #fff, 0 0 3px #fe14ca; }
 
-/* TABLE STYLING */
 table { width: 100%; border-collapse: collapse; margin-top: 15px; color: #fff; }
 th, td { border: 1px solid #fe14ca; padding: 12px; text-align: left; font-size: 14px; }
 th { background: #111; color: #fe14ca; }
 .highlight { color: #fe14ca; font-weight: bold; }
 
-/* PLACEHOLDERS */
-.placeholder { border: 2px dashed #fe14ca; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: #fe14ca; font-size: 14px; text-align: center; margin-bottom: 20px; }
+.footer { margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #fe14ca; position: relative; z-index: 10001; }
+.footer a { color: #fe14ca; text-decoration: none; font-size: 14px; }
 
-/* FOOTER & BUTTON */
-.footer { margin-top: 40px; text-align: center; padding: 20px; border-top: 1px solid #fe14ca; }
-#topBtn { position: fixed; bottom: 40px; right: 40px; background: #fe14ca; color: black; border: none; padding: 12px; cursor: pointer; z-index: 10000; }
+#topBtn { position: fixed; bottom: 40px; right: 40px; background: #fe14ca; color: black; border: none; padding: 12px; cursor: pointer; z-index: 10002; }
 </style>
 </head>
 
 <body>
 
-<!-- BORDER SCROLLS -->
 <div class="edge-banner edge-top"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 <div class="edge-banner edge-bottom"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 <div class="edge-banner edge-left"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 <div class="edge-banner edge-right"><span>Welcome to J’s Pet Palace • Where Every Pet Feels Like Family • </span></div>
 
-<!-- NAV TABS -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="booking.html">Booking, Grooming & DayCare</a>
@@ -70,8 +64,10 @@ th { background: #111; color: #fe14ca; }
        <img src="pictures/Lyrixx6Artfile78.PNG" style="width:320px; max-width:90%;">
     </div>
 
-    <!-- BANNER PLACEHOLDER -->
-    <div class="pictures/banner87.png" style="height: 160px; width: 100%;">Banner Placeholder</div>
+    <!-- BANNER IMAGE -->
+    <div style="margin-bottom: 20px;">
+        <img src="pictures/banner87.png" style="width: 100%; height: auto;">
+    </div>
 
     <!-- SERVICES MENU BOX -->
     <div class="section-box">
@@ -110,28 +106,24 @@ th { background: #111; color: #fe14ca; }
                 allowfullscreen>
             </iframe>
         </div>
-        <div style="margin-top: 15px;">
-            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1HK3SKyBn6uDoJ968DpZv_f7RSUv9oziCs8WpE60fc9wzZIumDI-vzCse37CfAxRjw1v86_Keg?gv=true" 
-               target="_blank" 
-               style="color: #fe14ca; font-size: 14px; text-decoration: underline;">
-               Trouble viewing? Click here to book in a new window.
-            </a>
-        </div>
     </div>
 
-    <!-- BOTTOM IMAGE PLACEHOLDER -->
+    <!-- BOTTOM LOGO -->
     <div style="text-align: center; margin-top: 20px;">
-        <div class="pictures/logo.png" style="width: 300px; height: 150px; margin: auto;">Bottom Picture Placeholder</div>
+        <img src="pictures/logo.png" style="width: 300px; max-width: 100%; height: auto; margin: auto;">
     </div>
 
-    <!-- BOTTOM BANNER PLACEHOLDER -->
-    <div class="pictures/border6.png" style="height: 90px; width: 100%;">Bottom Banner Placeholder</div>
+    <!-- BOTTOM BORDER IMAGE -->
+    <div style="margin-top: 20px;">
+        <img src="pictures/border6.png" style="width: 100%; height: auto;">
+    </div>
 
 </div>
 
-<!-- FOOTER -->
+<!-- CLICKABLE FOOTER -->
 <div class="footer">
-    https://www.instagram.com/jspetpalace/ | https://www.facebook.com/profile.php?id=61586446000186
+    <a href="https://www.instagram.com/jspetpalace/" target="_blank">Instagram</a> | 
+    <a href="https://www.facebook.com/profile.php?id=61586446000186" target="_blank">Facebook</a>
 </div>
 
 <button onclick="topFunction()" id="topBtn">Top</button>
@@ -144,4 +136,5 @@ function topFunction() {
 
 </body>
 </html>
+
 
